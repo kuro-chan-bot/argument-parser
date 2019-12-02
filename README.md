@@ -1,17 +1,26 @@
-# :pencil: typescript-package-template
+# @kuro-chan/argument-parser
 
-TypesScript package template.
+## Installation
 
-## :rocket: Features and Environment
+```bash
+yarn add @kuro-chan/argument-parser
+# or
+npm install @kuro-chan/argument-parser
+```
 
-- TypeScript
-- Babel
-- Webpack
-- Eslint
-- Prettier
-- Jest
-- Github Actions
-- CircleCI
+## Usage
 
-## :white_check_mark: TODO
-None.
+```typescript
+import { ArgumentParser } from '@kuro-chan/argument-parser'
+
+const parser = new ArgumentParser({
+  stringChars: [`'`, `"`],
+  escapeChars: [`\\`],
+  separatorChars: [' '],
+  trueStrings: [`true`],
+  falseStrings: [`false`]
+})
+const args = parser.parse(`text 'text' "text" text\\ text \\'text\\' \\"text\\" 0 10 0xff true false`)
+
+console.log(args) //[ 'text', 'text', 'text', 'text text', '\'text\'', '"text"', 0, 10, 255, true, false ]
+```
