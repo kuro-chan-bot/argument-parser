@@ -10,7 +10,8 @@
     "watch": "webpack --watch",
     "test": "jest --config jest.config.json",
     "test:watch": "npm run jest --watchAll",
-    "codecov": "npm run jest && codecov",
+    "cover": "nyc npm test",
+    "codecov": "npm run cover; nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "lint": "eslint ./**/*.ts"
   },
   "dependencies": {},
@@ -29,6 +30,7 @@
     "eslint-loader": "^3.0.2",
     "eslint-plugin-prettier": "^3.1.1",
     "jest": "^24.9.0",
+    "nyc": "^14.1.1",
     "prettier": "^1.19.1",
     "ts-jest": "^24.1.0",
     "ts-loader": "^6.2.1",
