@@ -1,5 +1,7 @@
 # @kuro-chan/argument-parser
 [![codecov](https://codecov.io/gh/kuro-chan-bot/argument-parser/branch/master/graph/badge.svg)](https://codecov.io/gh/kuro-chan-bot/argument-parser)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+
 
 ## Installation
 
