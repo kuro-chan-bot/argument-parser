@@ -1,4 +1,5 @@
 # @kuro-chan/argument-parser
+[![codecov](https://codecov.io/gh/kuro-chan-bot/argument-parser/branch/master/graph/badge.svg)](https://codecov.io/gh/kuro-chan-bot/argument-parser)
 
 ## Installation
 
